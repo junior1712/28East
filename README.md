@@ -22,18 +22,15 @@ This project implements a web application using This project was generated using
 
 1. **Clone the repository** (or download the code):
     ```bash
-    git clone https://github.com/yourusername/google-maps-app.git
-    cd google-maps-app
+   git clone https://github.com/junior1712/28East.git
+    cd 28East
     ```
 
 2. **Install dependencies**:
-    ```bash
+    ```run
     npm install
     ```
-    npm install @angular/google-maps
-    ```
-    npm install @googlemaps/js-api-loader
-    ````
+  
     
 
 4. **Set up your Google Maps API key**:
@@ -45,7 +42,7 @@ This project implements a web application using This project was generated using
 
 5. **Run the application**:
     ```bash
-    ng serve
+    ng serve -o
     ```
     The application will be available at [http://localhost:4200](http://localhost:4200).
 
