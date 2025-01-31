@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     if (typeof window !== 'undefined') {
       const loader = new Loader({
-        apiKey: 'AIzaSyCKgTeWV0H9QSvNV2ecYtYHu7WyI4lzNMk',
+        apiKey: 'AIzaSyCi8mYQ5jwiQUBR81fTHkhvX-FNtvE_WD4',
         version: 'weekly',
         libraries: ['places'],
       });
