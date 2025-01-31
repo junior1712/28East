@@ -1,59 +1,83 @@
-# GoogleMapsApp
+# Google Maps Web Application with Address Autocomplete
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.4.
+## Overview
+This project implements a web application using This project was generated using Angular CLI version 19.1.4 and Google Maps. The key feature of this application is an interactive Google Map that allows users to search for a location via an **Address Autocomplete** feature. Upon selecting a location, a pin drops at the selected location, and the map is centered on it.
 
-## Development server
+### Features:
+- **Address Autocomplete**: Users can search for a location using the Google Places Autocomplete API.
+- **Interactive Map**: The map is clickable, allowing users to drop a pin by clicking anywhere on the map.
+- **Info Window**: Upon selecting a location, an info window with the location’s details (such as name and address) is shown.
+- **Pin Drop**: A pin drops at the location selected through the autocomplete or map click.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## Getting Started
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Prerequisites
+- Node.js and npm installed. [Download Node.js](https://nodejs.org/)
+- Install Angular CLI (if not installed) and This project was generated using Angular CLI version 19.1.4
+- A Google Maps API key with Places API enabled. [Get a Google API Key](https://developers.google.com/maps/gmp-get-started).
 
-## Code scaffolding
+### Installation
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. **Clone the repository** (or download the code):
+    ```bash
+    git clone https://github.com/yourusername/google-maps-app.git
+    cd google-maps-app
+    ```
 
-```bash
-ng generate component component-name
-```
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
+    npm install @angular/google-maps
+    ```
+    npm install @googlemaps/js-api-loader
+    ````
+    
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+4. **Set up your Google Maps API key**:
+   - Replace the placeholder in `app.component.ts`:
+     ```typescript
+     apiKey: 'YOUR_GOOGLE_API_KEY',
+     ```
+   - Make sure to replace `'YOUR_GOOGLE_API_KEY'` with your actual API key.
 
-```bash
-ng generate --help
-```
+5. **Run the application**:
+    ```bash
+    ng serve
+    ```
+    The application will be available at [http://localhost:4200](http://localhost:4200).
 
-## Building
+---
 
-To build the project run:
+## File Structure
 
-```bash
-ng build
-```
+The application has the following basic structure:
+src/ ├── app/ │ ├── app.component.html │ ├── app.component.ts │ ├── app.component.css │ └── app.module.ts ├── assets/ ├── environments/ ├── index.html ├── main.ts └── styles.css
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- **app.component.ts**: Contains the logic for initializing the map, implementing the address autocomplete feature, handling map clicks, and displaying an info window with location details.
+- **app.component.html**: Provides the HTML template with an input field for the autocomplete feature and a div for rendering the map.
+- **app.module.ts**: Imports necessary modules, including the `GoogleMapsModule` for integrating the Google Maps API with Angular.
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## How It Works
 
-```bash
-ng test
-```
+### 1. **Google Maps API Integration**
+- The Google Maps API is loaded using the `@googlemaps/js-api-loader` package.
+- The `places` library is included to allow address autocomplete functionality.
 
-## Running end-to-end tests
+### 2. **Address Autocomplete**
+- The input field with `id="address"` is linked to the `google.maps.places.Autocomplete` service.
+- As the user types in the input field, suggestions appear. When a user selects an address, the map is updated with a marker at the location.
 
-For end-to-end (e2e) testing, run:
+### 3. **Map Click Event**
+- Users can also click on the map to drop a pin at the clicked location, and the map will center on that location.
+  
+### 4. **Marker and Info Window**
+- A marker is placed at the selected location (either from the autocomplete or map click).
+- An info window opens with the name and address of the selected place.
 
-```bash
-ng e2e
-```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
