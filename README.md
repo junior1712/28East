@@ -1,7 +1,7 @@
 # Google Maps Web Application with Address Autocomplete
 
 ## Overview
-This project implements a web application using This project was generated using Angular CLI version 19.1.4 and Google Maps. The key feature of this application is an interactive Google Map that allows users to search for a location via an **Address Autocomplete** feature. Upon selecting a location, a pin drops at the selected location, and the map is centered on it.
+This project implements a web application using Angular CLI version 19.1.4 and Google Maps. The key feature of this application is an interactive Google Map that allows users to search for a location via an **Address Autocomplete** feature. Upon selecting a location, a pin drops at the selected location, and the map is centered on it.
 
 ### Features:
 - **Address Autocomplete**: Users can search for a location using the Google Places Autocomplete API.
@@ -71,9 +71,9 @@ src/ ├── app/ │ ├── app.component.html │ ├── app.component
 ### 3. **Map Click Event**
 - Users can also click on the map to drop a pin at the clicked location, and the map will center on that location.
   
-### 4. **Marker and Info Window**
+### 4. **Marker **
 - A marker is placed at the selected location (either from the autocomplete or map click).
-- An info window opens with the name and address of the selected place.
+
 
 
 
