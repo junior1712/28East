@@ -6,8 +6,7 @@ This project implements a web application using This project was generated using
 ### Features:
 - **Address Autocomplete**: Users can search for a location using the Google Places Autocomplete API.
 - **Interactive Map**: The map is clickable, allowing users to drop a pin by clicking anywhere on the map.
-- **Info Window**: Upon selecting a location, an info window with the location’s details (such as name and address) is shown.
-- **Pin Drop**: A pin drops at the location selected through the autocomplete or map click.
+
 
 ---
 
